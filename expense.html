@@ -4,13 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Expense Tracker</title>
+  <link rel="stylesheet" href="CSSsheets/style.css" />
 </head>
 <body>
   <!-- Heading -->
   <h1>Expense Tracker</h1>
 
   <!-- Input form -->
-  <form>
+  <form class = myForm>
     <div>
       <label for="expense-name">Expense Name:</label>
       <input type="text" id="expense-name" name="expense-name" required />
@@ -25,12 +26,15 @@
   </form>
 
   <!-- List placeholder -->
+<div class="expenseList">
   <h2>Expenses</h2>
   <ul id="expense-list">
     <!-- Later, new <li> items will appear here via JavaScript -->
   </ul>
 
+
   <!-- Optional stretch: total -->
   <p><strong>Total:</strong> £0</p>
+  </div> 
 </body>
 </html>
