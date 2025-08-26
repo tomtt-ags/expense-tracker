@@ -12,7 +12,6 @@ h1 {
 .myForm {
   display: flex;
   flex-direction: column;
-  align-items: right;
   justify-content: center;
   gap: 10px;
   background-color: #00b3b3;
@@ -21,6 +20,10 @@ h1 {
   border: 8px solid #a6c0d2;
   width: 400px;
   margin: 0 auto;
+}
+.myForm .inputRow {
+  display: flex;
+  justify-content: flex-start;
 }
 .myForm label {
   display: inline-block;
@@ -35,9 +38,10 @@ h1 {
   margin-left: 10px;
 }
 .myForm button {
+  align-self: flex-end;
   background-color: #0056b3;
   width: 100px;
-  margin-left: 165px;  
+  /* margin-left: 165px;   */
   border-radius: 5px;
   color: rgba(22, 177, 225, 0.76);
   border: 1px solid #a6c0d2;
@@ -62,4 +66,87 @@ h1 {
   padding: 10px;
   background-color: #f0f0f0;
   border-radius: 5px;
+}
+
+@media screen and (max-width: 1024px) {
+  .myForm {
+    width: 70%;
+    max-width: 500px;
+  }
+  
+  .expenseList {
+    width: 70%;
+    max-width: 550px;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .myForm {
+    width: 85%;
+    max-width: 400px;
+  }
+  
+  .expenseList {
+    width: 85%;
+    max-width: 450px;
+  }
+  
+  .myForm label {
+    width: 120px;
+    font-size: 14px;
+  }
+  
+  .myForm input {
+    width: 120px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .myForm {
+    width: 90%; 
+    margin: 0 auto;
+  }
+  .expenseList {
+    width: 90%;
+    margin: 0 auto;
+  }
+  body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; 
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .myForm {
+    width: 95%;
+    padding: 15px;
+  }
+  
+  .expenseList {
+    width: 95%;
+  }
+  
+  .myForm label {
+    width: 100px;
+    font-size: 13px;
+  }
+  
+  .myForm input {
+    width: 100px;
+  }
+  
+  .myForm button {
+    width: 80px;
+    font-size: 14px;
+  }
+  
+  h1 {
+    font-size: 24px;
+  }
+  
+  h2 {
+    font-size: 20px;
+  }
 }
