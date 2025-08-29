@@ -37,6 +37,17 @@ h1 {
   padding: 5px;
   margin-left: 10px;
 }
+.expenseList li button {
+  background-color: #b32100;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid #a6c0d2;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.expenseList li button:hover {
+  background-color: #800000;
+}
 .myForm button {
   align-self: flex-end;
   background-color: #0056b3;

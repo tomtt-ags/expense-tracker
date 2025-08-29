@@ -28,11 +28,20 @@ form.addEventListener('submit', function(event) {
 });
 function updateExpenseList() {
     expenseList.innerHTML = '';
-    expenses.forEach(expense => {
+    expenses.forEach((expense, index) => {
         const newExpense = document.createElement('li');
         newExpense.textContent = `${expense.name}: £${expense.amount}`;
+        const deleteButton = document.createElement('button'); 
+        deleteButton.textContent = 'Delete';
+        deleteButton.onclick = function() {deleteExpense(index);};
+        newExpense.appendChild(deleteButton);
         expenseList.appendChild(newExpense);
     });
+}
+function deleteExpense(index) {
+    expenses.splice(index, 1);
+    updateExpenseList();
+    updateTotal();
 }
 function updateTotal() {
     const total = expenses.reduce((sum, expense) => sum + expense.amount, 0); 
